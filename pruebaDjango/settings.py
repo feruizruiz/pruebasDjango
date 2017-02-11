@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'prueba',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -56,8 +55,7 @@ ROOT_URLCONF = 'pruebaDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,10 +75,18 @@ WSGI_APPLICATION = 'pruebaDjango.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd2u7i2cqn95hlv',
+        'USER': 'phaiwxivngoeiu',
+        'PASSWORD': 'fcb5273139768a5e0a3c4efc55d41efb5fa5c7b64e388aef88ae991081a492db',
+        'HOST':'ec2-107-22-236-252.compute-1.amazonaws.com',
+        'PORT':'5432',
+ }
 }
 
 
